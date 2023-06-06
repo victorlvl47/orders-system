@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\Order;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('orders.index', [
-        'orders' => Order::all()
-    ]);
-});
+// Show all orders
+Route::get('/', [OrderController::class, 'index']);
