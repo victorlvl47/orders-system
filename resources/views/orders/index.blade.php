@@ -44,36 +44,18 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>John Doe</td>
-                <td>Online</td>
-                <td>Lorem ipsum dolor sit amet</td>
-                <td>2023-05-20</td>
-                <td>2023-05-22</td>
-                <td>5</td>
-                <td>$50.00</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Jane Smith</td>
-                <td>In-store</td>
-                <td>Consectetur adipiscing elit</td>
-                <td>2023-05-25</td>
-                <td>2023-05-25</td>
-                <td>3</td>
-                <td>$30.00</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Michael Johnson</td>
-                <td>Phone</td>
-                <td>Sed do eiusmod tempor incididunt</td>
-                <td>2023-05-30</td>
-                <td>2023-05-30</td>
-                <td>10</td>
-                <td>$100.00</td>
-            </tr>
+            @foreach ($orders as $order)
+                <tr>
+                    <td>{{$order->id}}</td>
+                    <td>{{$order->nombre}}</td>
+                    <td>{{$order->tipo_pedido}}</td>
+                    <td>{{$order->descripcion}}</td>
+                    <td>{{$order->fecha_entrega}}</td>
+                    <td>{{$order->fecha_recoleccion}}</td>
+                    <td>{{$order->cantidad_articulos}}</td>
+                    <td>{{$order->costo}}</td>
+                </tr>
+            @endforeach
         </tbody>
     </table>
 
