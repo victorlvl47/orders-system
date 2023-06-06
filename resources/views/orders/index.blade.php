@@ -1,6 +1,14 @@
 <x-layout>
-    <h1 id="mainTitle">Sistema pedidos</h1>
-    <div class="flex items-center justify-center min-h-screen bg-gray-900">
+    
+    <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center">
+        Sistema Pedidos
+    </h1>
+    <div class="flex items-center justify-center p-4">
+        <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+            Agregar Pedido +
+        </a>
+    </div>
+    <div class="flex items-center justify-center min-h-screen bg-gray-900 mb-10">
         <div class="col-span-12">
             <div class="overflow-auto lg:overflow-visible">
                 <table class="table text-gray-400 border-separate space-y-6 text-sm">
@@ -34,7 +42,4 @@
             </div>
         </div>
     </div>
-    
-
-    <button id="addOrderBtn" type="button">+ agregar pedido</button>
 </x-layout>
