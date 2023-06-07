@@ -1,5 +1,50 @@
 <x-layout>
-    
+    <nav class="flex justify-between items-center mb-4">
+        <a href="/"
+            ><img class="w-24" src="{{asset('images/order-logo1.png')}}" alt="" class="logo"
+        /></a>
+        <ul class="flex space-x-6 mr-6 text-lg">
+            <li class="text-white">
+                <a href="/orders/manage" class="hover:text-laravel"
+                    ><i class="fa-solid fa-list-check"></i>
+                    Administrar Pedidos</a
+                >
+            </li>
+            {{-- @auth
+            <li>
+                <span class="font-bold uppercase">
+                    Welcome {{auth()->user()->name}}
+                </span>
+            </li>
+            <li>
+                <a href="/posts/manage" class="hover:text-laravel"
+                    ><i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    Manage Posts</a
+                >
+            </li>
+            <li>
+                <form class="inline" method="POST" action="/logout">
+                    @csrf
+                    <button type="submit">
+                        <i class="fa-solid fa-door-closed"></i> Logout
+                    </button>
+                </form>
+            </li>
+            @else
+            <li>
+                <a href="/register" class="hover:text-laravel"
+                    ><i class="fa-solid fa-gear"></i> Register</a
+                >
+            </li>
+            <li>
+                <a href="/login" class="hover:text-laravel"
+                    ><i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    Login</a
+                >
+            </li>
+            @endauth --}}
+        </ul>
+    </nav>
     <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center">
         Sistema Pedidos
     </h1>
