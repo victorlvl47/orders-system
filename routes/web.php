@@ -16,3 +16,6 @@ use App\Http\Controllers\OrderController;
 
 // Show all orders
 Route::get('/', [OrderController::class, 'index']);
+
+// Show the create order form
+Route::get('/orders/create', [OrderController::class, 'create']);

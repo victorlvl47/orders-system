@@ -13,4 +13,9 @@ class OrderController extends Controller
             'orders' => Order::all()
         ]);
     }
+
+    // Show the create order form
+    public function create() {
+        return view('orders.create');
+    }
 }
