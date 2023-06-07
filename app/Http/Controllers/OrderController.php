@@ -21,6 +21,20 @@ class OrderController extends Controller
 
     // Store order data
     public function store(Request $request) {
-        dd($request->all());
+        // dd($request->all());
+
+        $formFields = $request->validate([
+            'nombre' => 'required', 
+            'tipo_pedido' => 'required', 
+            'descripcion' => 'required', 
+            'fecha_entrega' => 'required', 
+            'fecha_recoleccion' => 'required', 
+            'cantidad_articulos' => 'required', 
+            'costo' => 'required'
+        ]);
+
+        Order::create($formFields);
+
+        return redirect('/');
     }
 }
