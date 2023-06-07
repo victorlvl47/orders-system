@@ -19,3 +19,6 @@ Route::get('/', [OrderController::class, 'index']);
 
 // Show the create order form
 Route::get('/orders/create', [OrderController::class, 'create']);
+
+// Store Order data
+Route::post('/orders', [OrderController::class, 'store']);

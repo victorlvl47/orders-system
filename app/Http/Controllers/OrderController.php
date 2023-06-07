@@ -18,4 +18,9 @@ class OrderController extends Controller
     public function create() {
         return view('orders.create');
     }
+
+    // Store order data
+    public function store(Request $request) {
+        dd($request->all());
+    }
 }
