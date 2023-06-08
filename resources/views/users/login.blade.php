@@ -50,20 +50,8 @@
     </h1>
     <div class="flex items-center justify-center bg-gray-900 mt-10 mb-10">
         <div class="w-full max-w-lg">
-          <form method="POST" action="/users" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+          <form method="POST" action="/users/authenticate" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             @csrf
-            <div class="mb-4">
-              <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
-                Nombre
-              </label>
-              <input name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Ingrese el nombre">
-
-              @error('name')
-                <p class="text-red-500 text-xs mt-1">
-                  {{$message}}
-                </p>
-              @enderror
-            </div>
             <div class="mb-4">
               <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
                 Email
