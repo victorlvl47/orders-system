@@ -38,6 +38,13 @@ class OrderController extends Controller
         return redirect('/');
     }
 
+    // Delete Order
+    public function destroy(Order $order) {
+        $order->delete();
+
+        return redirect('/orders/manage');
+    }
+
     // Manage Orders
     public function manage() {
         return view('orders.manage', [
