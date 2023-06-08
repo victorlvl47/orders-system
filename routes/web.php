@@ -39,4 +39,8 @@ Route::get('/orders/manage', [OrderController::class, 'manage']);
 
 
 // ------------------------------ USER ROUTES ------------------------------
+// Show register user form
 Route::get('/register', [UserController::class, 'create']);
+
+// Creat a new user
+Route::post('/users', [UserController::class, 'store']);
