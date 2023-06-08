@@ -20,10 +20,10 @@ use App\Http\Controllers\UserController;
 Route::get('/', [OrderController::class, 'index']);
 
 // Show the create order form
-Route::get('/orders/create', [OrderController::class, 'create'])->middleware('auth');
+Route::get('/orders/create', [OrderController::class, 'create']);
 
 // Store Order data
-Route::post('/orders', [OrderController::class, 'store'])->middleware('auth');
+Route::post('/orders', [OrderController::class, 'store']);
 
 // Show edit Order
 Route::get('/orders/{order}/edit', [OrderController::class, 'edit'])->middleware('auth');
