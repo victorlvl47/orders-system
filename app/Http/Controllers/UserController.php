@@ -42,4 +42,9 @@ class UserController extends Controller
 
         return redirect('/');
     }
+
+    // Show login form
+    public function login() {
+        return view('users.login');
+    }
 }

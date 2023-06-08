@@ -30,6 +30,11 @@
                         ><i class="fa-solid fa-address-card"></i> Registrarse</a
                     >
                 </li>
+                <li class="text-white">
+                    <a href="/login" class="hover:text-laravel"
+                        ><i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesi&#243;n</a
+                    >
+                </li>
             @endauth
             {{-- @auth
             <li>
