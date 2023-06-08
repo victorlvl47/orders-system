@@ -11,10 +11,10 @@
                     </span>
                 </li>
                 <li class="text-white">
-                    <form class="inline" action="POST" action="/logout">
+                    <form class="inline" method="POST" action="/logout">
                         @csrf
                         <button type="submit">
-                            <i class="fa-solid fa-door-open"></i> cerrar sesi&#243;n
+                            <i class="fa-solid fa-door-open"></i> Cerrar Sesi&#243;n
                         </button>
                     </form>
                 </li>
