@@ -5,9 +5,9 @@
         /></a>
         <ul class="flex space-x-6 mr-6 text-lg">
             <li class="text-white">
-                <a href="/orders/manage" class="hover:text-laravel"
-                    ><i class="fa-solid fa-list-check"></i>
-                    Administrar Pedidos</a
+                <a href="/" class="hover:text-laravel"
+                    ><i class="fa-solid fa-home"></i>
+                    Regresar</a
                 >
             </li>
             {{-- @auth
