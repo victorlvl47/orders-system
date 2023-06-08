@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,7 @@ use App\Http\Controllers\OrderController;
 |
 */
 
+// ------------------------------ ORDER ROUTES ------------------------------
 // Show all orders
 Route::get('/', [OrderController::class, 'index']);
 
@@ -34,3 +36,7 @@ Route::delete('/orders/{order}', [OrderController::class, 'destroy']);
 
 // Manage Orders
 Route::get('/orders/manage', [OrderController::class, 'manage']);
+
+
+// ------------------------------ USER ROUTES ------------------------------
+Route::get('/register', [UserController::class, 'create']);
