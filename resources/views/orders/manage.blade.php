@@ -48,11 +48,11 @@
     <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center">
         Sistema Pedidos
     </h1>
-    <div class="flex items-center justify-center p-4">
+    {{-- <div class="flex items-center justify-center p-4">
         <a href="/orders/create" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
             Agregar Pedido +
         </a>
-    </div>
+    </div> --}}
     <div class="flex items-center justify-center min-h-screen bg-gray-900 mb-10">
         <div class="col-span-12">
             <div class="overflow-auto lg:overflow-visible">
@@ -70,17 +70,22 @@
                                 <td class="p-3">{{$order->id}}</td>
                                 <td class="p-3">{{$order->nombre}}</td>
                                 <td class="p-3">{{$order->descripcion}}</td>
-                                <td class="w-[100px] text-center">
-                                    <a href="#">
-                                        <span class="bg-blue-400 text-gray-50 rounded-md px-2">
-                                            Editar <i class="fa-solid fa-edit"></i> 
-                                        </span>
+                                <td class="px-4 py-8 text-lg">
+                                    <a
+                                        href="/orders/{{$order->id}}/edit"
+                                        class="text-cyan-400"
+                                    >
+                                        <i class="fa-solid fa-pen-to-square"></i> Editar
                                     </a>
                                 </td>
-                                <td class="w-[100px] text-center">
-                                    <span class="bg-red-400 text-gray-50 rounded-md px-2">
-                                        Eliminar <i class="fa-solid fa-trash"></i>
-                                    </span>
+                                <td class="px-4 py-8 text-lg">
+                                    <form method="POST" action="/orders/{{$order->id}}">
+                                    @csrf
+                                    @method('DELETE')
+                                        <button class="text-red-500">
+                                            <i class="fa-solid fa-trash"></i> Delete
+                                        </button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
