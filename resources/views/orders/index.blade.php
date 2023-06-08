@@ -7,8 +7,16 @@
             @auth
                 <li class="text-white">
                     <span>
-                        Usuario: {{auth()->user()->name}}
+                        <i class="fa-solid fa-user"></i> {{auth()->user()->name}}
                     </span>
+                </li>
+                <li class="text-white">
+                    <form class="inline" action="POST" action="/logout">
+                        @csrf
+                        <button type="submit">
+                            <i class="fa-solid fa-door-open"></i> cerrar sesi&#243;n
+                        </button>
+                    </form>
                 </li>
                 <li class="text-white">
                     <a href="/orders/manage" class="hover:text-laravel"
