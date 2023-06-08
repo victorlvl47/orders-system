@@ -70,7 +70,7 @@
                                 <td class="p-3">{{$order->id}}</td>
                                 <td class="p-3">{{$order->nombre}}</td>
                                 <td class="p-3">{{$order->descripcion}}</td>
-                                <td class="px-4 py-8 text-lg">
+                                <td class="px-4 py-8 text-lg text-center">
                                     <a
                                         href="/orders/{{$order->id}}/edit"
                                         class="text-cyan-400"
@@ -78,12 +78,12 @@
                                         <i class="fa-solid fa-pen-to-square"></i> Editar
                                     </a>
                                 </td>
-                                <td class="px-4 py-8 text-lg">
+                                <td class="px-4 py-8 text-lg text-center">
                                     <form method="POST" action="/orders/{{$order->id}}">
                                     @csrf
                                     @method('DELETE')
                                         <button class="text-red-500">
-                                            <i class="fa-solid fa-trash"></i> Delete
+                                            <i class="fa-solid fa-trash"></i> Eliminar
                                         </button>
                                     </form>
                                 </td>
