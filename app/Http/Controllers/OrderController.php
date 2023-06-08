@@ -45,6 +45,24 @@ class OrderController extends Controller
         ]);
     }
 
+    // Update Order data
+    public function update(Request $request, Order $order) {
+
+        $formFields = $request->validate([
+            'nombre' => 'required', 
+            'tipo_pedido' => 'required', 
+            'descripcion' => 'required', 
+            'fecha_entrega' => 'required', 
+            'fecha_recoleccion' => 'required', 
+            'cantidad_articulos' => 'required', 
+            'costo' => 'required'
+        ]);
+
+        $order->update($formFields);
+
+        return redirect('/orders/manage');
+    }
+
     // Delete Order
     public function destroy(Order $order) {
         $order->delete();

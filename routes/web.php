@@ -26,6 +26,9 @@ Route::post('/orders', [OrderController::class, 'store']);
 // Show edit Order
 Route::get('/orders/{order}/edit', [OrderController::class, 'edit']);
 
+// Update Order
+Route::put('/orders/{order}', [OrderController::class, 'update']);
+
 // Delete Order
 Route::delete('/orders/{order}', [OrderController::class, 'destroy']);
 
