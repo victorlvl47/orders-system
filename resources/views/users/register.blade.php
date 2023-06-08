@@ -106,6 +106,7 @@
               </button>
               <a href="/" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Cancelar</a>
             </div>
+            <p class="mt-5">Ya tienes una cuenta? <a href="/login" class="text-blue-500">Iniciar Sesi&#243;n</a></p>
           </form>
         </div>
       </div>      
