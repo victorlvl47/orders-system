@@ -22,3 +22,6 @@ Route::get('/orders/create', [OrderController::class, 'create']);
 
 // Store Order data
 Route::post('/orders', [OrderController::class, 'store']);
+
+// Manage Orders
+Route::get('/orders/manage', [OrderController::class, 'manage']);

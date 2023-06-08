@@ -37,4 +37,11 @@ class OrderController extends Controller
 
         return redirect('/');
     }
+
+    // Manage Orders
+    public function manage() {
+        return view('orders.manage', [
+            'orders' => Order::all()
+        ]);
+    }
 }
