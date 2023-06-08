@@ -4,17 +4,25 @@
             ><img class="w-24" src="{{asset('images/order-logo1.png')}}" alt="" class="logo"
         /></a>
         <ul class="flex space-x-6 mr-6 text-lg">
-            <li class="text-white">
-                <a href="/register" class="hover:text-laravel"
-                    ><i class="fa-solid fa-address-card"></i> Registrarse</a
-                >
-            </li>
-            <li class="text-white">
-                <a href="/orders/manage" class="hover:text-laravel"
-                    ><i class="fa-solid fa-list-check"></i>
-                    Administrar Pedidos</a
-                >
-            </li>
+            @auth
+                <li class="text-white">
+                    <span>
+                        Usuario: {{auth()->user()->name}}
+                    </span>
+                </li>
+                <li class="text-white">
+                    <a href="/orders/manage" class="hover:text-laravel"
+                        ><i class="fa-solid fa-list-check"></i>
+                        Administrar Pedidos</a
+                    >
+                </li>
+            @else
+                <li class="text-white">
+                    <a href="/register" class="hover:text-laravel"
+                        ><i class="fa-solid fa-address-card"></i> Registrarse</a
+                    >
+                </li>
+            @endauth
             {{-- @auth
             <li>
                 <span class="font-bold uppercase">
