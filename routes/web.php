@@ -23,6 +23,9 @@ Route::get('/orders/create', [OrderController::class, 'create']);
 // Store Order data
 Route::post('/orders', [OrderController::class, 'store']);
 
+// Show edit Order
+Route::get('/orders/{order}/edit', [OrderController::class, 'edit']);
+
 // Delete Order
 Route::delete('/orders/{order}', [OrderController::class, 'destroy']);
 

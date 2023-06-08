@@ -38,6 +38,13 @@ class OrderController extends Controller
         return redirect('/');
     }
 
+    // Show Edit Form
+    public function edit(Order $order) {
+        return view('orders.edit', [
+            'order' => $order
+        ]);
+    }
+
     // Delete Order
     public function destroy(Order $order) {
         $order->delete();
