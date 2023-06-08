@@ -20,36 +20,36 @@ use App\Http\Controllers\UserController;
 Route::get('/', [OrderController::class, 'index']);
 
 // Show the create order form
-Route::get('/orders/create', [OrderController::class, 'create']);
+Route::get('/orders/create', [OrderController::class, 'create'])->middleware('auth');
 
 // Store Order data
-Route::post('/orders', [OrderController::class, 'store']);
+Route::post('/orders', [OrderController::class, 'store'])->middleware('auth');
 
 // Show edit Order
-Route::get('/orders/{order}/edit', [OrderController::class, 'edit']);
+Route::get('/orders/{order}/edit', [OrderController::class, 'edit'])->middleware('auth');
 
 // Update Order
-Route::put('/orders/{order}', [OrderController::class, 'update']);
+Route::put('/orders/{order}', [OrderController::class, 'update'])->middleware('auth');
 
 // Delete Order
-Route::delete('/orders/{order}', [OrderController::class, 'destroy']);
+Route::delete('/orders/{order}', [OrderController::class, 'destroy'])->middleware('auth');
 
 // Manage Orders
-Route::get('/orders/manage', [OrderController::class, 'manage']);
+Route::get('/orders/manage', [OrderController::class, 'manage'])->middleware('auth');
 
 
 // ------------------------------ USER ROUTES ------------------------------
 // Show register user form
-Route::get('/register', [UserController::class, 'create']);
+Route::get('/register', [UserController::class, 'create'])->middleware('guest');
 
 // Creat a new user
-Route::post('/users', [UserController::class, 'store']);
+Route::post('/users', [UserController::class, 'store'])->middleware('guest');
 
 // Log user out
-Route::post('/logout', [UserController::class, 'logout']);
+Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 
 // Show login form
-Route::get('/login', [UserController::class, 'login']);
+Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
 
 // Login user
-Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+Route::post('/users/authenticate', [UserController::class, 'authenticate'])->middleware('guest');
