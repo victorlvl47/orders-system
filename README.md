@@ -1,4 +1,4 @@
-# Nombre del Proyecto
+# Sistema Pedidos
 
 Sistema Pedidos, es una aplicación diseñada para manejar y organizar pedidos de manera eficiente. Los usuarios pueden registrarse en esta app para administrar los pedidos.
 
